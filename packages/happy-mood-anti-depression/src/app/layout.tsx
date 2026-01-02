@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Build anything from a chat",
-  description: "Turn chats into apps. Prompt. Ship. Repeat.",
+  title: "Happy Mood - Personalized Humor for Mental Wellness",
+  description: "Fight depression with personalized comedy in multiple languages including Pidgin. Uplift your mood with humor tailored to how you feel.",
 };
 
 export default function RootLayout({
@@ -32,3 +32,4 @@ export default function RootLayout({
     </html>
   );
 }
+
