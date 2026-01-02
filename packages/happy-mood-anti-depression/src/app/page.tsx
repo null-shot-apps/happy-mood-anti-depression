@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-type Mood = 'sad' | 'stressed' | 'anxious' | 'lonely' | 'bored' | null;
+type Mood = 'sad' | 'stressed' | 'anxious' | 'lonely' | 'bored';
 type Language = 'english' | 'pidgin' | 'spanish' | 'french' | 'yoruba';
 
 interface ComedyContent {
@@ -129,17 +129,10 @@ const comedyDatabase: Record<Mood, Record<Language, ComedyContent[]>> = {
       { type: 'note', content: "Aarẹ jẹ anfani lati ṣe nkan titun! 🎯", language: 'yoruba' },
     ],
   },
-  null: {
-    english: [],
-    pidgin: [],
-    spanish: [],
-    french: [],
-    yoruba: [],
-  },
 };
 
 export default function HappyMoodApp() {
-  const [selectedMood, setSelectedMood] = useState<Mood>(null);
+  const [selectedMood, setSelectedMood] = useState<Mood | null>(null);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>('english');
   const [currentContent, setCurrentContent] = useState<ComedyContent | null>(null);
   const [showContent, setShowContent] = useState(false);
@@ -301,4 +294,7 @@ export default function HappyMoodApp() {
     </div>
   );
 }
+
+
+
 
